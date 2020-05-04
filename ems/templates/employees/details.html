@@ -1,0 +1,50 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<!-- <h2>{{title}}:{{user.id}}</h2> -->
+
+<!-- {%if user%}
+<ul>
+    <li>{{user.first_name}}&nbsp;{{user.last_name}}</li>
+    <li>{{user.email}}</li>
+</ul> -->
+<!-- {%else%}
+<p>There is no user available</p> -->
+
+<!-- {%endif%} -->
+
+
+<table class="table table-striped table-light table-bordered">
+    
+    <tbody>
+      <tr>
+        <th>First Name</th>
+        <td>{{user.first_name}}</td>
+      </tr>
+      <tr>
+        <th>Last Name</th>
+        <td>{{user.last_name}}</td>
+      </tr>
+      <tr>
+        <th>Email ID</th>
+        <td>{{user.email}}</td>
+      </tr>
+      <tr>
+        <th>Salary</th>
+        <td>{{user.profile.salary}}</td>
+      </tr>
+      <tr>
+        <th>Designation</th>
+        <td>{{user.profile.designation}}</td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+<div class="float-right">
+    <a class="btn btn-warning" href="{%url 'employee_edit' user.id%}" role="button">Edit</a>
+    <a class="btn btn-danger" href="{%url 'employee_delete' user.id%}" role="button">Delete</a>
+</div>
+
+{%endblock content%}

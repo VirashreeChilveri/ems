@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<br>
+<h4>My Profile</h4>
+
+<table class="table table-striped table-light table-bordered">
+    
+    <tbody>
+      <tr>
+        <th>First Name</th>
+        <td>{{object.user.first_name}}</td>
+      </tr>
+      <tr>
+        <th>Last Name</th>
+        <td>{{object.user.last_name}}</td>
+      </tr>
+      <tr>
+        <th>Email ID</th>
+        <td>{{object.user.email}}</td>
+      </tr>
+      <tr>
+        <th>Salary</th>
+        <td>{{object.salary}}</td>
+      </tr>
+      <tr>
+        <th>Designation</th>
+        <td>{{object.designation}}</td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+<div class="float-right">
+    <a class="btn btn-warning" href="{%url 'update_profile'%}" role="button">Edit Profile</a>
+</div>
+
+{%endblock content%}
